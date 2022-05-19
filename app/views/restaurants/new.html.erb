@@ -1,0 +1,15 @@
+<div class="container m-5">
+  <h2>Add a new restaurant</h2>
+  <br>
+  <%= form_for(@restaurant) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+    <%= f.submit %>
+  <% end %>
+  <br>
+  <a href='/restaurants'><button type="button" class="btn btn-primary mx-1">Back to list</button></a>
+</div>

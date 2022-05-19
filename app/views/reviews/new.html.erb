@@ -1,0 +1,13 @@
+<div class="container m-5">
+  <h2>Add a new review</h2>
+  <br>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>
+    <%= f.submit %>
+  <% end %>
+  <br>
+  <a href='/restaurants'><button type="button" class="btn btn-primary mx-1">Back to list</button></a>
+</div>

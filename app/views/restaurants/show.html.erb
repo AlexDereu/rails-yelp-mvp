@@ -1,0 +1,18 @@
+<div class="container m-5">
+  <h2><%= @restaurant.name %></h2>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.category %></p>
+  <br>
+  <div class="d-flex">
+    <a href='<%= params[:id] %>/reviews/new'><button type="button" class="btn btn-warning mx-1">Add a review</button></a>
+    <br>
+    <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li><%= review.rating %> : <%= review.content %></li>
+    <% end %>
+  </ul>
+    <br>
+  </div>
+  <br>
+  <a href='/restaurants'><button type="button" class="btn btn-primary mx-1">Back to list</button></a>
+</div>
